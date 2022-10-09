@@ -20,8 +20,9 @@ const Template: ComponentStory<PathType> = (args) => (
     }}
     width="100%"
     height={800}
+    viewBox={"0 -10 30 30"}
   >
-    <Layout>
+    <Layout size={{ x: 1, y: 1 }}>
       <Hexagon
         css={css`
           fill: #4499a9;
@@ -86,6 +87,98 @@ const Template: ComponentStory<PathType> = (args) => (
         r={-3}
         s={0}
         rings={2}
+        fillUrl={
+          "https://firebasestorage.googleapis.com/v0/b/illuviumsite.appspot.com/o/images%2FArchos.JPG-01276e8-c24-8ca8-e201-425d12febad?alt=media&token=8de71462-d4e0-42f0-a80f-dd76276bcfcf"
+        }
+      />
+      <Hexagon
+        css={css`
+          fill: #4499a9;
+          fill-opacity: 0.6;
+
+          &:hover {
+            fill: #7be3f6;
+            fill-opacity: 0.9;
+          }
+          polygon {
+            stroke: #7be3f6;
+            stroke-width: 0.2;
+            transition: fill-opacity 0.5s;
+          }
+        `}
+        q={9}
+        r={-4}
+        s={0}
+        rings={3}
+        fillUrl={
+          "https://firebasestorage.googleapis.com/v0/b/illuviumsite.appspot.com/o/images%2FArchos.JPG-01276e8-c24-8ca8-e201-425d12febad?alt=media&token=8de71462-d4e0-42f0-a80f-dd76276bcfcf"
+        }
+      />
+      <Hexagon
+        css={css`
+          fill: #4499a9;
+          fill-opacity: 0.6;
+
+          &:hover {
+            fill: #7be3f6;
+            fill-opacity: 0.9;
+          }
+          polygon {
+            stroke: #7be3f6;
+            stroke-width: 0.2;
+            transition: fill-opacity 0.5s;
+          }
+        `}
+        q={13}
+        r={-11}
+        s={0}
+        rings={4}
+        fillUrl={
+          "https://firebasestorage.googleapis.com/v0/b/illuviumsite.appspot.com/o/images%2FArchos.JPG-01276e8-c24-8ca8-e201-425d12febad?alt=media&token=8de71462-d4e0-42f0-a80f-dd76276bcfcf"
+        }
+      />
+      <Hexagon
+        css={css`
+          fill: #4499a9;
+          fill-opacity: 0.6;
+
+          &:hover {
+            fill: #7be3f6;
+            fill-opacity: 0.9;
+          }
+          polygon {
+            stroke: #7be3f6;
+            stroke-width: 0.2;
+            transition: fill-opacity 0.5s;
+          }
+        `}
+        q={25}
+        r={-11}
+        s={0}
+        rings={5}
+        fillUrl={
+          "https://firebasestorage.googleapis.com/v0/b/illuviumsite.appspot.com/o/images%2FArchos.JPG-01276e8-c24-8ca8-e201-425d12febad?alt=media&token=8de71462-d4e0-42f0-a80f-dd76276bcfcf"
+        }
+      />
+      <Hexagon
+        css={css`
+          fill: #4499a9;
+          fill-opacity: 0.6;
+
+          &:hover {
+            fill: #7be3f6;
+            fill-opacity: 0.9;
+          }
+          polygon {
+            stroke: #7be3f6;
+            stroke-width: 0.2;
+            transition: fill-opacity 0.5s;
+          }
+        `}
+        q={-13}
+        r={9}
+        s={0}
+        rings={6}
         fillUrl={
           "https://firebasestorage.googleapis.com/v0/b/illuviumsite.appspot.com/o/images%2FArchos.JPG-01276e8-c24-8ca8-e201-425d12febad?alt=media&token=8de71462-d4e0-42f0-a80f-dd76276bcfcf"
         }
