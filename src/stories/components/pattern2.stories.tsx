@@ -20,8 +20,9 @@ const Template: ComponentStory<PathType> = (args) => (
     }}
     width="100%"
     height={800}
+    viewBox={"0 -10 30 30"}
   >
-    <Layout>
+    <Layout size={{ x: 1, y: 1 }}>
       <Hexagon
         css={css`
           fill: #4499a9;
