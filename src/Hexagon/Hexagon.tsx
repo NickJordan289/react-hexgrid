@@ -99,18 +99,34 @@ export function Hexagon(
   } = props
 
   const { layout, points } = useLayoutContext()
-  let q2 = q ;
-  let r2 = r ;
-  let s2 = s ;
+  let q2 = q
+  let r2 = r
+  let s2 = s
   if (rings == 1) {
-    r2 -= 1;
-  } else if (rings == 2)
-  {
-    q2 -= 2;
-    r2 += 1;
+    r2 -= 1
+  } else if (rings == 2) {
+    q2 -= 2
+    r2 += 1
+  } else if (rings == 3) {
+    q2 -= 3
+    r2 += 2
+  } else if (rings == 4) {
+    q2 -= 7
+    r2 -= 1
+  } else if (rings == 5) {
+    q2 -= 5
+    r2 += 4
+  } else if (rings == 6) {
+    q2 += -6
+    r2 -= -5
   }
 
-  const cornerCoords = calculateCoordinates(layout.size.x, 0, new Point(0, 0), rings)
+  const cornerCoords = calculateCoordinates(
+    layout.size.x,
+    0,
+    new Point(0, 0),
+    rings,
+  )
   const ps = cornerCoords.map((point) => `${point.x},${point.y}`).join(" ")
 
   const { hex, pixel } = React.useMemo(() => {
@@ -126,8 +142,10 @@ export function Hexagon(
   const state = { hex }
 
   // Generate id for local pattern
-  const patId = fillUrl ? React.useMemo(() => Math.random().toString(36).substr(2, 9), []) : undefined
-  
+  const patId = fillUrl
+    ? React.useMemo(() => Math.random().toString(36).substr(2, 9), [])
+    : undefined
+
   // if fill point to existing pattern, if fillUrl point to local pattern, otherwise default styling
   const fillId = fill ? `url(#${fill})` : fillUrl ? `url(#${patId})` : undefined
   const draggable = { draggable: true } as any
@@ -194,12 +212,16 @@ export function Hexagon(
         <polygon points={ps} fill={fillId} style={cellStyle} />
         {children}
         {patId ? (
-
-        <Pattern
-          id={`${patId}`}
-          link={fillUrl!}
-          size={new Point((rings+1)*20*(layout.size.x/10), (rings+1)*20*(layout.size.y/10))}
-        />
+          <Pattern
+            id={`${patId}`}
+            link={fillUrl!}
+            size={
+              new Point(
+                (rings + 1) * 20 * (layout.size.x / 10),
+                (rings + 1) * 20 * (layout.size.y / 10),
+              )
+            }
+          />
         ) : null}
       </g>
     </g>
